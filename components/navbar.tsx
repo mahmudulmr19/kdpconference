@@ -9,7 +9,9 @@ export function Navbar() {
           <span className="text-orange-500">KDP</span> Conf
         </div>
 
-        <Button className="uppercase">get your ticket</Button>
+        <Button className="uppercase h-12" size="lg">
+          get your ticket
+        </Button>
       </div>
     </div>
   );
