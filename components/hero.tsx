@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
@@ -16,7 +16,9 @@ export function Hero() {
             Join us for a memorable event in 20th October 2023.
           </p>
           <Link href="/buy-ticket">
-            <Button>GET YOUR TICKET</Button>
+            <Button className="uppercase h-12" size="lg">
+              get your ticket
+            </Button>
           </Link>
         </div>
       </div>
