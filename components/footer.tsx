@@ -73,8 +73,10 @@ export function Footer() {
           <Image src={sslcomerzImage} alt="sslcomerz payment methods" />
           <p className="text-white text-sm font-medium">
             &copy; {new Date().getFullYear()} by{" "}
-            <span className="text-orange-500">KDP Conference</span> | All Right
-            Reserved.
+            <a href="https://www.kdpconference.com" className="text-orange-500">
+              KDP Conference
+            </a>{" "}
+            | All Right Reserved.
           </p>
         </div>
       </div>
