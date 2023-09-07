@@ -1,7 +1,6 @@
 import React from "react";
 import { Card } from "./ui/card";
 import Image from "next/image";
-import { AspectRatio } from "./ui/aspect-ratio";
 
 const speakerdata = [
   {
@@ -43,16 +42,20 @@ export function WhoSpeaking() {
             key={speaker.name}
             className="p-2 w-full rounded cursor-pointer"
           >
-            <AspectRatio>
+            <div className="h-72 relative group overflow-hidden">
               <Image
                 className="h-72 rounded"
                 src={speaker.image}
                 alt={speaker.name}
                 fill
               />
-            </AspectRatio>
+
+              <div className="absolute top-full left-0 group-hover:top-0 transition-all duration-300 w-full h-full bg-orange-500/80" />
+            </div>
             <div className="text-center mt-2">
-              <h2 className="text-lg">{speaker.name}</h2>
+              <h2 className="text-lg hover:text-orange-500 transition">
+                {speaker.name}
+              </h2>
               <p className="text-sm">{speaker.ocupation}</p>
             </div>
           </Card>
