@@ -16,7 +16,7 @@ export function Hero() {
             Join us for a memorable event in 20th October 2023.
           </p>
           <Link href="/buy-ticket">
-            <Button className="uppercase h-12" size="lg">
+            <Button className="uppercase h-12 rounded-full" size="lg">
               get your ticket
             </Button>
           </Link>
