@@ -18,6 +18,14 @@ model Order {
   phoneNumber String
   tshirt_size TShirtType
   status      OrderStatus
+  event       OrderEvent
+}
+
+type OrderEvent {
+  eventName String
+  price     String
+  date      String
+  venue     String
 }
 
 enum OrderStatus {
