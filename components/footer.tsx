@@ -12,9 +12,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 md:justify-items-center lg:grid-cols-3 gap-4">
           <div className="text-white space-y-8">
             <div className="space-y-2">
-              <div className="font-bold text-lg">
-                <span className="text-orange-500">KDP</span> Conf
-              </div>
+              <Link href="/" className="font-bold text-xl block">
+                <span className="text-orange-500">KDP</span> Conference
+              </Link>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil
                 animi inventore, totam reprehenderit quibusdam, quaerat quos
