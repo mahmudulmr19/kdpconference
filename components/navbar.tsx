@@ -10,7 +10,9 @@ export function Navbar() {
           <span className="text-orange-500">KDP</span> Conference
         </Link>
 
-        <Button className="uppercase h-12" size="lg">
+        <Button className="uppercase h-12 md:hidden">get your ticket</Button>
+
+        <Button className="uppercase h-12 hidden md:block" size="lg">
           get your ticket
         </Button>
       </div>
