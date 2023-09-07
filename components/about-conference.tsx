@@ -23,7 +23,7 @@ export function AboutConference() {
               Program <span className="text-orange-500">intro</span>
             </h2>
             <div className="py-[2px] bg-orange-500 max-w-[4rem]" />
-            <h3 className="sm:text-lg font-semibold">19th August, 2023</h3>
+            <h3 className="sm:text-lg font-semibold">20th October, 2023</h3>
           </div>
 
           <div className="text-sm text-black space-y-2">
