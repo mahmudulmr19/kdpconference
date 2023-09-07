@@ -20,12 +20,6 @@ model Order {
   status      OrderStatus
 }
 
-model Event {
-  id        String @id @default(auto()) @map("_id") @db.ObjectId
-  eventName String
-  price     Int
-}
-
 enum OrderStatus {
   SUCCESS
   FAILED
