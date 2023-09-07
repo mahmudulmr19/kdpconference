@@ -10,11 +10,16 @@ export function Navbar() {
           <span className="text-orange-500">KDP</span> Conference
         </Link>
 
-        <Button className="uppercase h-12 md:hidden">get your ticket</Button>
-
-        <Button className="uppercase h-12 hidden md:block" size="lg">
+        <Button className="capitalize text-xs sm:text-sm rounded-full active:scale-95">
           get your ticket
         </Button>
+
+        {/* <Button
+          className="uppercase rounded-full hidden md:block active:scale-95 transition"
+          // size="lg"
+        >
+          get your ticket
+        </Button> */}
       </div>
     </div>
   );
