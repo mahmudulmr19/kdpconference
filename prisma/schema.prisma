@@ -17,13 +17,18 @@ model Order {
   email       String
   phoneNumber String
   tshirt_size TShirtType
-  status      OrderStatus @default(PENDING)
+  status      OrderStatus
+}
+
+model Event {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  eventName String
+  price     Int
 }
 
 enum OrderStatus {
   SUCCESS
   FAILED
-  PENDING
 }
 
 enum TShirtType {
