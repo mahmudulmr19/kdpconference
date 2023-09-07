@@ -2,6 +2,7 @@ import React from "react";
 import { Hero } from "@/components/hero";
 import { AboutConference } from "@/components/about-conference";
 import { ChiefGuest } from "@/components/chief-guest";
+import { WhoSpeaking } from "@/components/who-speaking";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <AboutConference />
       <ChiefGuest />
+      <WhoSpeaking />
     </main>
   );
 }
