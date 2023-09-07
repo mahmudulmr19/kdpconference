@@ -42,12 +42,13 @@ export function WhoSpeaking() {
             key={speaker.name}
             className="p-2 w-full rounded cursor-pointer"
           >
-            <div className="h-72 relative group overflow-hidden">
+            <div className="relative group overflow-hidden w-full">
               <Image
-                className="h-72 rounded"
+                className="rounded w-full h-auto"
                 src={speaker.image}
                 alt={speaker.name}
-                fill
+                width={400}
+                height={400}
               />
 
               <div className="absolute top-full left-0 group-hover:top-0 transition-all duration-300 w-full h-full bg-orange-500/80">
