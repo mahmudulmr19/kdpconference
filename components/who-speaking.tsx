@@ -5,25 +5,25 @@ import Image from "next/image";
 const speakerdata = [
   {
     name: "Md Mohsin",
-    image: "https://i.ibb.co/TTGc23J/moshin.jpg",
+    image: "https://i.ibb.co/TMWwqCx/Mohsin-Vai.jpg",
     ocupation: "Author on Amazon KDP",
     founder: "N/A",
   },
   {
     name: "R.I Woazed",
-    image: "https://i.ibb.co/dQ85wWH/woa-zed.jpg",
+    image: "https://i.ibb.co/88krwCw/Wazed-vai.jpg",
     ocupation: "Author on Amazon KDP",
     founder: "Woazed Graphics",
   },
   {
     name: "Md Shohagh Hossen",
-    image: "https://i.ibb.co/py8MDWB/Md-Shohagh-Hossen.jpg",
+    image: "https://i.ibb.co/T2LD7n3/Shohag-Vai.jpg",
     ocupation: "Author on Amazon KDP",
     founder: "Learn With Shohagh & Merch Bundle",
   },
   {
     name: "Nirnoy Nirob",
-    image: "https://i.ibb.co/PmHh1y0/Nirnoy-Nirob.jpg",
+    image: "https://i.ibb.co/fpPpp6z/Nirob-vai.jpg",
     ocupation: "Author on Amazon KDP",
     founder: "Graphics Tech 360",
   },
