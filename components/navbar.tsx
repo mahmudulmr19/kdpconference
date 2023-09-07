@@ -12,7 +12,7 @@ export function Navbar() {
         </Link>
 
         <Link
-          href="/buy-ticket"
+          href="/checkout"
           className={cn(
             buttonVariants(),
             "capitalize text-xs sm:text-sm rounded-full active:scale-95"

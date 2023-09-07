@@ -15,7 +15,7 @@ export function Hero() {
           <p className="text-lg md:text-xl text-orange-500">
             Join us for a memorable event in 20th October 2023.
           </p>
-          <Link href="/buy-ticket">
+          <Link href="/checkout">
             <Button className="uppercase h-12 rounded-full" size="lg">
               get your ticket
             </Button>
