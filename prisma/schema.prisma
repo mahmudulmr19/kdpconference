@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Order {
+  id          String      @id @default(auto()) @map("_id") @db.ObjectId
+  firstName   String
+  lastName    String
+  email       String
+  phoneNumber String
+  tshirt_size TShirtType
+  status      OrderStatus @default(PENDING)
+}
+
+enum OrderStatus {
+  SUCCESS
+  FAILED
+  PENDING
+}
+
+enum TShirtType {
+  S
+  M
+  L
+  XL
+  XXL
+  XXXL
+}
