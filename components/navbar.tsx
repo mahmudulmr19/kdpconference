@@ -1,5 +1,6 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 export function Navbar() {
@@ -10,16 +11,15 @@ export function Navbar() {
           <span className="text-orange-500">KDP</span> Conference
         </Link>
 
-        <Button className="capitalize text-xs sm:text-sm rounded-full active:scale-95">
-          get your ticket
-        </Button>
-
-        {/* <Button
-          className="uppercase rounded-full hidden md:block active:scale-95 transition"
-          // size="lg"
+        <Link
+          href="/buy-ticket"
+          className={cn(
+            buttonVariants(),
+            "capitalize text-xs sm:text-sm rounded-full active:scale-95"
+          )}
         >
           get your ticket
-        </Button> */}
+        </Link>
       </div>
     </div>
   );
