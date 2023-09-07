@@ -30,6 +30,10 @@ export async function POST(req: Request) {
     const { firstName, lastName, email, phoneNumber, tshirt_size }: BodyType =
       await req.json();
 
+    if (!firstName || !lastName || !email || !phoneNumber || !tshirt_size) {
+      return new NextResponse("Invalid data");
+    }
+
     const event = {
       eventName: "KDP Conference 2023",
       price: 500,
