@@ -7,25 +7,25 @@ const speakerdata = [
     name: "Md Mohsin",
     image: "https://i.ibb.co/TTGc23J/moshin.jpg",
     ocupation: "Author on Amazon KDP",
-    founder: "found of N/A",
+    founder: "N/A",
   },
   {
     name: "R.I Woazed",
     image: "https://i.ibb.co/dQ85wWH/woa-zed.jpg",
     ocupation: "Author on Amazon KDP",
-    founder: "found of Woazed Graphics",
+    founder: "Woazed Graphics",
   },
   {
     name: "Md Shohagh Hossen",
     image: "https://i.ibb.co/py8MDWB/Md-Shohagh-Hossen.jpg",
     ocupation: "Author on Amazon KDP",
-    founder: "found of Learn With Shohagh & Merch Bundle",
+    founder: "Learn With Shohagh & Merch Bundle",
   },
   {
     name: "Nirnoy Nirob",
     image: "https://i.ibb.co/PmHh1y0/Nirnoy-Nirob.jpg",
     ocupation: "Author on Amazon KDP",
-    founder: "founder of Graphics Tech 360",
+    founder: "Graphics Tech 360",
   },
 ];
 
@@ -50,7 +50,12 @@ export function WhoSpeaking() {
                 fill
               />
 
-              <div className="absolute top-full left-0 group-hover:top-0 transition-all duration-300 w-full h-full bg-orange-500/80" />
+              <div className="absolute top-full left-0 group-hover:top-0 transition-all duration-300 w-full h-full bg-orange-500/80">
+                <div className="flex flex-col items-center justify-center h-full">
+                  <h3 className="font-bold text-white text-lg">Founder of</h3>
+                  <p className="text-white text-center">{speaker.founder}</p>
+                </div>
+              </div>
             </div>
             <div className="text-center mt-2">
               <h2 className="text-lg hover:text-orange-500 transition">
