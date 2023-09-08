@@ -18,7 +18,7 @@ model Order {
   email       String
   phoneNumber String
   tshirt_size TShirtType
-  status      OrderStatus
+  status      OrderStatus @default(PENDING)
   event       OrderEvent
 }
 
@@ -32,6 +32,7 @@ type OrderEvent {
 enum OrderStatus {
   SUCCESS
   FAILED
+  PENDING
 }
 
 enum TShirtType {
