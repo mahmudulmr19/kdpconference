@@ -12,6 +12,7 @@ datasource db {
 
 model Order {
   id          String      @id @default(auto()) @map("_id") @db.ObjectId
+  tran_id     String      @unique
   firstName   String
   lastName    String
   email       String
