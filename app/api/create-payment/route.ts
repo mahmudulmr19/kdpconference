@@ -1,13 +1,14 @@
 import { sslcommerz } from "@/lib/sslcommerz";
 import { NextResponse } from "next/server";
+import { prisma } from "@/prisma/db";
 
 enum TShirtType {
-  S,
-  M,
-  L,
-  XL,
-  XXL,
-  XXXL,
+  S = "S",
+  M = "M",
+  L = "L",
+  XL = "XL",
+  XXL = "XXL",
+  XXXL = "XXXL",
 }
 
 interface BodyType {
@@ -43,14 +44,6 @@ export async function POST(req: Request) {
 
     const tran_id = generateTransactionID();
 
-    const user = {
-      firstName,
-      lastName,
-      email,
-      phoneNumber,
-      tshirt_size,
-      event,
-    };
     const data = {
       total_amount: event.price,
       product_amount: event.price,
@@ -63,12 +56,28 @@ export async function POST(req: Request) {
       cus_name: `${firstName} ${lastName}`,
       cus_email: email,
       cus_phone: phoneNumber,
-      user,
       product_name: event.eventName,
       product_category: "event",
       product_profile: "non-physical-goods",
     };
+
     const response = await sslcommerz.init(data);
+    await prisma.order.create({
+      data: {
+        tran_id,
+        firstName,
+        lastName,
+        email,
+        phoneNumber,
+        event: {
+          date: event.date,
+          eventName: event.eventName,
+          price: event.price.toString(),
+          venue: event.venue,
+        },
+        tshirt_size: tshirt_size,
+      },
+    });
 
     return NextResponse.json({ GatewayPageURL: response.GatewayPageURL });
   } catch (error: any) {
