@@ -4,6 +4,9 @@ import sslcomerzImage from "@/assets/sslcommerz.png";
 import Link from "next/link";
 import { HiPhone } from "react-icons/hi";
 import { HiEnvelope } from "react-icons/hi2";
+import { BsFacebook, BsYoutube } from "react-icons/bs";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "./ui/button";
 
 export function Footer() {
   return (
@@ -15,11 +18,12 @@ export function Footer() {
               <Link href="/" className="font-bold text-xl block">
                 <span className="text-orange-500">KDP</span> Conference
               </Link>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil
-                animi inventore, totam reprehenderit quibusdam, quaerat quos
-                delectus provident ipsa veniam tenetur. Distinctio similique
-                libero debitis, labore quisquam dicta nulla autem.
+              <p className="text-[15px]">
+                The main objective of KDP Conference is to establish the largest
+                and most cooperative community with all the Authors in
+                Bangladesh. KDP Conference- Authors Community is committed to
+                working together as a family, working towards positive aspects
+                of the community.
               </p>
             </div>
 
@@ -36,6 +40,33 @@ export function Footer() {
           </div>
 
           <div className="text-white">
+            <h2 className="text-[#f4bb72] font-semibold text-lg mb-5">
+              Community
+            </h2>
+
+            <div className="mb-5 flex items-center gap-2">
+              <Link
+                href="https://www.facebook.com/groups/kdpconference"
+                target="_blank"
+                className={cn(
+                  buttonVariants({ size: "icon" }),
+                  "ring-offset-black"
+                )}
+              >
+                <BsFacebook className="w-5 h-5" />
+              </Link>
+              <Link
+                href="https://www.youtube.com/@kdpconference"
+                target="_blank"
+                className={cn(
+                  buttonVariants({ size: "icon" }),
+                  "ring-offset-black"
+                )}
+              >
+                <BsYoutube className="w-5 h-5" />
+              </Link>
+            </div>
+
             <h2 className="text-[#f4bb72] font-semibold text-lg">
               Useful Links
             </h2>

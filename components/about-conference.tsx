@@ -29,18 +29,21 @@ export function AboutConference() {
 
             <div className="text-sm text-black space-y-2">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reprehenderit optio recusandae amet odio porro nemo maxime ut
-                perspiciatis mollitia eum a assumenda, nesciunt ad. Tenetur quos
-                explicabo doloribus quidem minus!
+                Welcome to the{" "}
+                <strong>First KDP Conference 2023 in Bangladesh</strong>, an
+                exclusive event for <strong>KDP authors</strong>. This day is
+                all about boosting your <strong>self-publishing journey</strong>
+                , connecting with <strong>fellow authors</strong>, and gaining
+                insights from experts in the field.
               </p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reprehenderit nulla eum esse deserunt iure molestias!
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus quod est ducimus explicabo distinctio atque!
+                Join us to learn from <strong>top-notch speakers</strong>,
+                collaborate with like-minded authors, and hear inspiring success
+                stories. Discover <strong>valuable information&apos;s</strong>{" "}
+                and tailor-made <strong>marketing strategies</strong> to enhance
+                your career. Don&apos;t miss this opportunity for a day of
+                growth and inspiration – save the date for the{" "}
+                <strong>KDP Conference 2023!</strong>
               </p>
             </div>
           </div>
