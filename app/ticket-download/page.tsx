@@ -6,6 +6,7 @@ import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import logo from "./logo.svg";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -42,19 +43,6 @@ export default async function TicketDownload({
         )}
       >
         <div className="flex items-start justify-between w-full gap-x-8">
-          <div className="w-3/12">
-            <div className="flex flex-col items-center gap-4">
-              <h2 className="font-bold text-gray-900">Scan the QR code:</h2>
-              <Image
-                className="bg-white rounded-xl p-3 border-2 border-gray-900"
-                src={qrCode}
-                alt={`${order.firstName} ${order.lastName} qrcode`}
-                width={300}
-                height={300}
-              />
-              <Separator />
-            </div>
-          </div>
           <div className="w-3/4 border-l pl-5">
             <h2 className="font-bold text-gray-900">{order.event.eventName}</h2>
             <div className="flex flex-col gap-4 mt-4 font-medium text-sm text-gray-800">
@@ -96,8 +84,26 @@ export default async function TicketDownload({
               </p>
             </div>
           </div>
+          <div className="w-3/12">
+            <div className="flex flex-col items-center gap-4">
+              <h2 className="font-bold text-gray-900">Scan the QR code:</h2>
+              <Image
+                className="bg-white rounded-xl p-3 border-2 border-gray-900"
+                src={qrCode}
+                alt={`${order.firstName} ${order.lastName} qrcode`}
+                width={300}
+                height={300}
+              />
+              <Separator />
+
+              <div className="flex items-center flex-col gap-1">
+                <h6 className="font-semibold text-sm">Organized by</h6>
+                <Image src={logo} alt="learn with rakib logo" />
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex items-center justify-center my-8">
+        <div className="flex items-center justify-center my-10">
           <Button>Download</Button>
         </div>
       </div>
