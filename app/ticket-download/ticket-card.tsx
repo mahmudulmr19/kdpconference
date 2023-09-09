@@ -90,7 +90,9 @@ export function TicketCard({
           </div>
         </div>
         <div className="flex items-center justify-center my-10">
-          <Button className="print:hidden">Download</Button>
+          <Button className="print:hidden" onClick={() => window.print()}>
+            Print
+          </Button>
         </div>
       </div>
     </main>
