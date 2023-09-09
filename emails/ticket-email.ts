@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+export function getTicketEmail(link: string, name: string) {
+  return `
+	<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -76,7 +78,7 @@
                   Congratulations on Your KDP Conference Tickets!
                 </h1>
                 <p style="color: #666; font-size: 16px; margin: 10px 0">
-                  Dear [User's Name],
+                  Dear ${name},
                 </p>
                 <p style="color: #666; font-size: 16px; margin: 10px 0">
                   We are thrilled to inform you that your ticket purchase for
@@ -88,7 +90,7 @@
                 </p>
                 <p style="margin: 20px 0">
                   <a
-                    href=""
+                    href="${link}"
                     style="
                       background-color: #f97316;
                       color: #fff;
@@ -244,3 +246,5 @@
     </table>
   </body>
 </html>
+`;
+}

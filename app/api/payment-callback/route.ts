@@ -1,5 +1,6 @@
-import { NextResponse } from "next/server";
 import { prisma } from "@/prisma/db";
+import { transporter } from "@/lib/transporter";
+import { getTicketEmail } from "@/emails/ticket-email";
 
 export async function POST(req: Request) {
   try {
@@ -31,7 +32,7 @@ export async function POST(req: Request) {
       throw new Error("Order not found");
     }
 
-    const updatedOrder = await prisma.order.update({
+    await prisma.order.update({
       data: {
         status: "SUCCESS",
       },
@@ -39,8 +40,15 @@ export async function POST(req: Request) {
         tran_id,
       },
     });
+    const link = `${process.env.DOMAIN}/ticket-download?token=${order.tran_id}`;
+    await transporter.sendMail({
+      from: `KDP CONFERENCE <${process.env.NODEMAILER_EMAIL}>`,
+      to: order.email,
+      subject: "Congratulations on Your KDP Conference Tickets!",
+      html: getTicketEmail(link, `${order.firstName} ${order.lastName}`),
+    });
 
-    return NextResponse.json({ extractedData, updatedOrder });
+    return Response.redirect(link);
   } catch (error) {
     return Response.redirect(`${process.env.DOMAIN}/failed`);
   }
