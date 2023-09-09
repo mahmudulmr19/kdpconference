@@ -13,8 +13,9 @@ import {
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import * as z from "zod";
 import { Label } from "@/components/ui/label";
+import * as z from "zod";
+import axios from "axios";
 
 const schema = z.object({
   firstName: z
@@ -44,6 +45,8 @@ export default function CheckoutForm() {
   const onSubmit = async (data: z.infer<typeof schema>) => {
     setLoading(true);
     try {
+      const response = await axios.post("/api/create-payment", data);
+      window.location.href = response.data.GatewayPageURL;
     } catch (error) {
     } finally {
       setLoading(false);
@@ -145,7 +148,7 @@ export default function CheckoutForm() {
           <div className="md:col-span-2 flex items-center justify-end">
             <div>
               <Button disabled={loading}>
-                {loading ? "Loading..." : "Confirm Order"}
+                {loading ? "Loading..." : "Confirm Ticket"}
               </Button>
             </div>
           </div>
