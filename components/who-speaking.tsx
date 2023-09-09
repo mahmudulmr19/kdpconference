@@ -27,6 +27,24 @@ const speakerdata = [
     ocupation: "Author on Amazon KDP",
     founder: "Graphics Tech 360",
   },
+  {
+    name: "Al-Amin Islam",
+    image: "https://i.ibb.co/c6BhJYW/Al-Amin.jpg",
+    ocupation: "Author on Amazon KDP",
+    founder: "CEO at Webla Solutions",
+  },
+  {
+    name: "Md Hussain Ahmad",
+    image: "https://i.ibb.co/B682R3p/Hussain-Vai.jpg",
+    ocupation: "Author on Amazon KDP",
+    founder: "The Young Future",
+  },
+  {
+    name: "Md Rakib Ahmed",
+    image: "https://i.ibb.co/SJYRGmG/Rakib-Vai.jpg",
+    ocupation: "Author on Amazon KDP",
+    founder: "Learn With Rakib",
+  },
 ];
 
 export function WhoSpeaking() {
@@ -53,8 +71,16 @@ export function WhoSpeaking() {
 
               <div className="absolute top-full left-0 group-hover:top-0 transition-all duration-300 w-full h-full bg-orange-500/80">
                 <div className="flex flex-col items-center justify-center h-full">
-                  <h3 className="font-bold text-white text-lg">Founder of</h3>
-                  <p className="text-white text-center">{speaker.founder}</p>
+                  <h3 className="font-bold text-white text-lg">
+                    {speaker.founder.startsWith("CEO")
+                      ? "CEO at"
+                      : "Founder of"}
+                  </h3>
+                  <p className="text-white text-center">
+                    {speaker.founder.startsWith("CEO at")
+                      ? speaker.founder.replace("CEO at", "")
+                      : speaker.founder}
+                  </p>
                 </div>
               </div>
             </div>
