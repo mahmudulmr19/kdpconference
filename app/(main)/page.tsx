@@ -13,8 +13,8 @@ export default function Home() {
       <AboutConference />
       <ChiefGuest />
       <WhoSpeaking />
-      <EventDate />
       <ConferenceSchedule />
+      <EventDate />
     </main>
   );
 }
