@@ -44,12 +44,12 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: `KDP CONFERENCE <${process.env.NODEMAILER_EMAIL}>`,
       to: order.email,
-      subject: "Congratulations on Your KDP Conference Tickets!",
+      subject: "Congratulations on Your KDP Conference Ticket!",
       html: getTicketEmail(link, `${order.firstName} ${order.lastName}`),
     });
 
     return Response.redirect(link);
   } catch (error) {
-    return Response.redirect(`${process.env.DOMAIN}/failed`);
+    return Response.redirect(`${process.env.DOMAIN}/`);
   }
 }
