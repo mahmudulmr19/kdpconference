@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
@@ -32,25 +32,27 @@ const schema = z.object({
   tshirt_size: z.enum(["S", "M", "L", "XL", "XXL", "XXXL"], {
     required_error: "Please choose one of item",
   }),
-
-  isAgree: z.boolean(),
 });
 
 export default function CheckoutForm() {
+  const [loading, setLoading] = useState<boolean>(false);
+
   const form = useForm<z.infer<typeof schema>>({
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data: z.infer<typeof schema>) => {
-    console.log(data);
+  const onSubmit = async (data: z.infer<typeof schema>) => {
+    setLoading(true);
+    try {
+    } catch (error) {
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <Form {...form}>
-      <form
-        // className="grid grid-cols-6 mt-4 gap-8"
-        onSubmit={form.handleSubmit(onSubmit)}
-      >
+      <form onSubmit={form.handleSubmit(onSubmit)}>
         <div className="col-span-6 md:col-span-4 grid grid-cols-1 md:grid-cols-2 gap-4">
           <h4 className="text-lg font-semibold text-gray-900 mb-4 md:col-span-2">
             Order Information
@@ -142,11 +144,12 @@ export default function CheckoutForm() {
           </h4>
           <div className="md:col-span-2 flex items-center justify-end">
             <div>
-              <Button>Confirm Order</Button>
+              <Button disabled={loading}>
+                {loading ? "Loading..." : "Confirm Order"}
+              </Button>
             </div>
           </div>
         </div>
-        {/* <div className="col-span-6 md:col-span-2"></div> */}
       </form>
     </Form>
   );
