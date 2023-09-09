@@ -41,7 +41,7 @@ export function ChiefGuest() {
         </div>
         <div className="w-full">
           <Image
-            className="h-[500px] w-full rounded"
+            className="w-full rounded"
             src={tanvirimage}
             alt="that wkieuhi"
           />
