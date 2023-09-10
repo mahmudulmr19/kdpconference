@@ -37,7 +37,7 @@ export async function POST(req: Request) {
 
     const event = {
       eventName: "KDP Conference 2023",
-      price: 100,
+      price: 500,
       date: "20th October 2023",
       venue: "Western Cuisine Restaurant and Convention Center",
     };
