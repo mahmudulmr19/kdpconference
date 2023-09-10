@@ -75,7 +75,7 @@ export function getTicketEmail(link: string, name: string) {
             <tr>
               <td style="padding: 20px">
                 <h1 style="color: #333; margin: 20px 0; font-size: x-large">
-                  Congratulations on Your KDP Conference Tickets!
+                  Congratulations on Your KDP Conference Ticket!
                 </h1>
                 <p style="color: #666; font-size: 16px; margin: 10px 0">
                   Dear ${name},
@@ -133,7 +133,7 @@ export function getTicketEmail(link: string, name: string) {
                 </p>
 
                 <img
-                src="https://cdn.learnwithrakib.pro/public/files/logo.png"
+                src="https://cdn.learnwithrakib.pro/public/files/lwr-logo.png"
                 width="100"
                 />
               </td>
