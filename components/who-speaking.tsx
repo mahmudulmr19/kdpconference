@@ -41,7 +41,7 @@ const speakerdata = [
   },
   {
     name: "Md Rakib Ahmed",
-    image: "https://i.ibb.co/SJYRGmG/Rakib-Vai.jpg",
+    image: "https://i.ibb.co/sg5fxqC/Rakib-Vai.jpg",
     ocupation: "Author on Amazon KDP",
     founder: "Learn With Rakib",
   },
