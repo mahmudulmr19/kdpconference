@@ -16,6 +16,8 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import * as z from "zod";
 import axios from "axios";
+import { Checkbox } from "@/components/ui/checkbox";
+import Link from "next/link";
 
 const schema = z.object({
   firstName: z
@@ -33,6 +35,12 @@ const schema = z.object({
   tshirt_size: z.enum(["S", "M", "L", "XL", "XXL", "XXXL"], {
     required_error: "Please choose one of item",
   }),
+  isAgree: z
+    .boolean()
+    .default(false)
+    .refine((value) => value === true, {
+      message: "You have to agree with our terms and conditions!",
+    }),
 });
 
 export default function CheckoutForm() {
@@ -58,7 +66,7 @@ export default function CheckoutForm() {
       <form onSubmit={form.handleSubmit(onSubmit)}>
         <div className="col-span-6 md:col-span-4 grid grid-cols-1 md:grid-cols-2 gap-4">
           <h4 className="text-lg font-semibold text-gray-900 mb-4 md:col-span-2">
-            Order Information
+            Ticket Information
           </h4>
           <FormField
             control={form.control}
@@ -142,9 +150,47 @@ export default function CheckoutForm() {
               </FormItem>
             )}
           />
-          <h4 className="text-lg font-semibold text-gray-900 my-2">
+          <h4 className="text-lg md:col-span-2 font-semibold text-gray-900 my-2">
             Ticket Price: 500tk
           </h4>
+          <FormField
+            control={form.control}
+            name="isAgree"
+            render={({ field }) => {
+              return (
+                <FormItem>
+                  <FormControl>
+                    <div className="flex items-center space-x-2 mt-2">
+                      <Checkbox
+                        id="agree"
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                      />
+                      <Label htmlFor="agree" className="text-gray-500">
+                        I agree to all the{" "}
+                        <Link
+                          href="/privacy-policy"
+                          className="text-gray-900"
+                          target="_blank"
+                        >
+                          privacy policy
+                        </Link>{" "}
+                        and{" "}
+                        <Link
+                          href="/refund-policy"
+                          className="text-gray-900"
+                          target="_blank"
+                        >
+                          refund policy
+                        </Link>
+                      </Label>
+                    </div>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              );
+            }}
+          />
           <div className="md:col-span-2 flex items-center justify-end">
             <div>
               <Button disabled={loading}>
