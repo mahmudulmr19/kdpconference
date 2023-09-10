@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import sslcomerzImage from "@/assets/sslcommerz.png";
 import Link from "next/link";
+import logo from "@/assets/logo.svg";
 import { HiPhone } from "react-icons/hi";
 import { HiEnvelope } from "react-icons/hi2";
 import { BsFacebook, BsYoutube } from "react-icons/bs";
@@ -10,13 +11,13 @@ import { buttonVariants } from "./ui/button";
 
 export function Footer() {
   return (
-    <footer className="bg-black">
+    <footer className="border-t">
       <div className="container py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 md:justify-items-center lg:grid-cols-3 gap-4">
-          <div className="text-white space-y-8">
-            <div className="space-y-2">
+          <div className=" space-y-8">
+            <div className="space-y-2.5">
               <Link href="/" className="font-bold text-xl block">
-                <span className="text-orange-500">KDP</span> Conference
+                <Image src={logo} alt="kdp conference" height={40} />
               </Link>
               <p className="text-[15px]">
                 The main objective of KDP Conference is to establish the largest
@@ -39,8 +40,8 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="text-white">
-            <h2 className="text-[#f4bb72] font-semibold text-lg mb-5">
+          <div className="">
+            <h2 className="text-orange-500 font-semibold text-lg mb-5">
               Community
             </h2>
 
@@ -67,7 +68,7 @@ export function Footer() {
               </Link>
             </div>
 
-            <h2 className="text-[#f4bb72] font-semibold text-lg">
+            <h2 className="text-orange-500 font-semibold text-lg">
               Useful Links
             </h2>
 
@@ -87,7 +88,7 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <h2 className="text-[#f4bb72] font-semibold text-lg">Location</h2>
+            <h2 className="text-orange-500 font-semibold text-lg">Location</h2>
             <iframe
               className="rounded-md mt-5"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57514.7052418463!2d89.30873895797721!3d25.715378495062343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e3337cdad94343%3A0xd582daefd946c062!2sWestern%20Cuisine%20Restaurant%20and%20Convention%20Center!5e0!3m2!1sen!2sus!4v1694026409142!5m2!1sen!2sus"
@@ -102,7 +103,7 @@ export function Footer() {
         </div>
         <div className="text-center space-y-8 mt-10">
           <Image src={sslcomerzImage} alt="sslcomerz payment methods" />
-          <p className="text-white text-sm font-medium">
+          <p className=" text-sm font-medium">
             &copy; {new Date().getFullYear()} by{" "}
             <a href="https://www.kdpconference.com" className="text-orange-500">
               KDP Conference

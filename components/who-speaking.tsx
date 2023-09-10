@@ -12,7 +12,7 @@ const speakerdata = [
   {
     name: "Md Shohagh Hossen",
     image: "https://i.ibb.co/T2LD7n3/Shohag-Vai.jpg",
-    ocupation: "Author on Amazon KDP",
+    ocupation: "Designer",
     founder: "Learn With Shohagh & Merch Bundle",
   },
   {

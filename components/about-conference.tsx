@@ -9,14 +9,19 @@ export function AboutConference() {
         </h1>
 
         <div className="flex flex-col md:flex-row md:items-center w-full gap-y-4 md:gap-x-4 lg:gap-x-8 xl:gap-x-10 2xl:gap-x-10">
-          <iframe
+          {/* <iframe
             className="aspect-video w-full rounded"
             src="https://www.youtube.com/embed/60ItHLz5WEA?si=_9U6aGRY9PQ2gtPz"
             title="YouTube video player"
             frameBorder={0}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-          />
+          /> */}
+          <video
+            src="https://cdn.learnwithrakib.pro/public/files/event-trailer.mp4"
+            className="aspect-video w-full rounded max-w-[550px]"
+            controls
+          ></video>
 
           <div className="w-full space-y-4">
             <div className="space-y-2">
