@@ -9,9 +9,10 @@ export default function Organizer() {
         <h1 className="text-3xl font-bold  uppercase">
           Event <span className="text-orange-500">Organizer</span>
         </h1>
-        <p className="text-gray-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
-          totam!
+        <p className="text-gray-600 max-w-lg text-sm mx-auto">
+          KDP Conference 2023 has been made possible thanks to the brilliant
+          minds and dedicated individuals who have worked tirelessly to bring
+          this event to life.
         </p>
       </div>
 
