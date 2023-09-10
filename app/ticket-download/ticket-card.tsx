@@ -6,7 +6,7 @@ import { Poppins } from "next/font/google";
 import { Order } from "@prisma/client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import logo from "./logo.svg";
+import logo from "@/assets/lwr-logo.svg";
 
 const poppins = Poppins({
   subsets: ["latin"],

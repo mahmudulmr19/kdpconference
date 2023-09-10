@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import bannerImage from "@/assets/banner.jpg";
 
 export function AboutConference() {
   return (
@@ -17,11 +19,18 @@ export function AboutConference() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           /> */}
-          <video
+          {/* <video
             src="https://cdn.learnwithrakib.pro/public/files/event-trailer.mp4"
             className="aspect-video w-full rounded max-w-[550px]"
             controls
-          ></video>
+          ></video> */}
+          <div className="w-full">
+            <Image
+              src={bannerImage}
+              alt="kdp conference"
+              className="w-full rounded"
+            />
+          </div>
 
           <div className="w-full space-y-4">
             <div className="space-y-2">

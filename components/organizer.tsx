@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+import logo from "@/assets/lwr-logo.svg";
 import Image from "next/image";
 
 export default function Organizer() {
