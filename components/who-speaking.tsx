@@ -4,12 +4,6 @@ import Image from "next/image";
 
 const speakerdata = [
   {
-    name: "Md Mohsin",
-    image: "https://i.ibb.co/TMWwqCx/Mohsin-Vai.jpg",
-    ocupation: "Author on Amazon KDP",
-    founder: "N/A",
-  },
-  {
     name: "R.I Woazed",
     image: "https://i.ibb.co/88krwCw/Wazed-vai.jpg",
     ocupation: "Author on Amazon KDP",
@@ -54,7 +48,7 @@ export function WhoSpeaking() {
         <span className="text-orange-500">Who</span> Speaking?
       </h1>
 
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mt-10">
         {speakerdata.map((speaker) => (
           <Card
             key={speaker.name}
