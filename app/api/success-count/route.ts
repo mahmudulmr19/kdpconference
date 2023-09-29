@@ -1,7 +1,11 @@
 import { prisma } from "@/prisma/db";
-import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: Request) {
+export async function GET(req: NextRequest) {
+  const path = req.nextUrl.searchParams.get("path") || "/";
+  revalidatePath(path);
+
   const successTransaction = await prisma.order.findMany({
     where: {
       status: "SUCCESS",
@@ -11,7 +15,6 @@ export async function GET(req: Request) {
   return NextResponse.json({
     success: true,
     status: 200,
-    count: successTransaction.length,
-    data: successTransaction,
+    orderCount: successTransaction.length,
   });
 }
