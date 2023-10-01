@@ -11,7 +11,7 @@ export function ChiefGuest() {
               OUR HONORABLE <span className="text-orange-500">CHIEF GUEST</span>
             </h5>
             <h4 className="text-2xl md:text-3xl font-bold uppercase">
-              Tanbir Hossain
+              Tanbir Hossain Asharafi
             </h4>
             <div className="py-[2px] bg-orange-500 max-w-[4rem]" />
           </div>
@@ -32,10 +32,11 @@ export function ChiefGuest() {
               Justice SM Morshed Gold Award in 2019 and the Nelson Mandela Award
               for his impactful service and promotion of universal ideals. Amid
               the challenges of the COVID-19 pandemic, he was recognized with
-              the Business Award in 2020 for his outstanding leadership. Tanbir
-              Asharafi&apos;s influence and dedication continue to inspire
-              positive change, making him a highly respected figure in North
-              Bengal and beyond.
+              the Business Award in 2020 for his outstanding leadership.
+              Bangabandhu Cultural Foundation and Bangladesh Nagarik Parishad
+              presented Sher-e-Bangla Award 2019 on July 11, 2019 at Shawkat
+              Osman Auditorium in Dhaka for special contribution in
+              organizational skills.
             </p>
           </div>
         </div>
