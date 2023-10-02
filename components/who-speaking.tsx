@@ -20,7 +20,7 @@ const speakerdata = [
   },
   {
     name: "Al-Amin Islam",
-    image: "https://i.ibb.co/jhfYMWD/Alamin-vai-m.jpg",
+    image: "https://i.ibb.co/gmSHWFr/02-Speakers-Mockup.png",
     ocupation: "Author on Amazon KDP",
   },
   {
