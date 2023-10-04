@@ -1,5 +1,4 @@
 import React from "react";
-import tanvirimage from "@/assets/tanbir.png";
 import Image from "next/image";
 export function ChiefGuest() {
   return (
@@ -43,7 +42,9 @@ export function ChiefGuest() {
         <div className="w-full">
           <Image
             className="w-full rounded"
-            src={tanvirimage}
+            src="/tanvir.jpg"
+            width={400}
+            height={300}
             alt="that wkieuhi"
           />
         </div>
