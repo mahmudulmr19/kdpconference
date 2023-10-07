@@ -12,7 +12,7 @@ export function Navbar() {
         <Link href="/" className="font-bold text-xl block">
           <Image src={logo} alt="kdp conference logo" height={40} />
         </Link>
-        {/* 
+
         <Link
           href="/checkout"
           className={cn(
@@ -21,7 +21,7 @@ export function Navbar() {
           )}
         >
           get your ticket
-        </Link> */}
+        </Link>
       </div>
     </div>
   );
