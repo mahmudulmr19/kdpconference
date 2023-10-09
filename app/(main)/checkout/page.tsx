@@ -1,13 +1,13 @@
-import React from "react";
-import CheckoutForm from "./checkout-form";
-// import { redirect } from "next/navigation";
+// import React from "react";
+// import CheckoutForm from "./checkout-form";
+import { redirect } from "next/navigation";
 
 export default function CheckoutPage() {
-  // redirect("/");
+  redirect("/");
 
-  return (
-    <main className="container_section py-[5rem!important]">
-      <CheckoutForm />
-    </main>
-  );
+  // return (
+  //   <main className="container_section py-[5rem!important]">
+  //     <CheckoutForm />
+  //   </main>
+  // );
 }

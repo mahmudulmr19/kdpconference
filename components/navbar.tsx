@@ -1,6 +1,6 @@
 import React from "react";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+// import { buttonVariants } from "@/components/ui/button";
+// import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/logo.svg";
@@ -12,7 +12,7 @@ export function Navbar() {
         <Link href="/" className="font-bold text-xl block">
           <Image src={logo} alt="kdp conference logo" height={40} />
         </Link>
-
+        {/* 
         <Link
           href="/checkout"
           className={cn(
@@ -21,7 +21,7 @@ export function Navbar() {
           )}
         >
           get your ticket
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
